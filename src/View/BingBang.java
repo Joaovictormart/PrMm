@@ -1,8 +1,8 @@
 package View;
 
-public class Produto extends javax.swing.JFrame {
+public class BingBang extends javax.swing.JFrame {
     
-    public Produto() {
+    public BingBang() {
         initComponents();
     }
     
@@ -81,7 +81,7 @@ public class Produto extends javax.swing.JFrame {
             }
         });
 
-        btn4.setText("ADD CARINHO");
+        btn4.setText("ADD CARRINHO");
         btn4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn4ActionPerformed(evt);
@@ -192,7 +192,7 @@ public class Produto extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Produto().setVisible(true);
+                new BingBang().setVisible(true);
             }
         });
     }

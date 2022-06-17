@@ -34,8 +34,8 @@ public class NovaHome extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        bSaiba = new javax.swing.JButton();
+        bMin = new javax.swing.JButton();
         catalogo = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -108,18 +108,28 @@ public class NovaHome extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/A/Kobe/IMAEM/relogios-punta-del-este-uruguai-1087x680.jpg"))); // NOI18N
 
-        jButton3.setBackground(new java.awt.Color(255, 153, 0));
-        jButton3.setFont(new java.awt.Font("SimSun", 3, 18)); // NOI18N
-        jButton3.setText("Saiba mais");
-        jButton3.setBorder(null);
-        jButton3.setBorderPainted(false);
+        bSaiba.setBackground(new java.awt.Color(255, 153, 0));
+        bSaiba.setFont(new java.awt.Font("SimSun", 3, 18)); // NOI18N
+        bSaiba.setText("Saiba mais");
+        bSaiba.setBorder(null);
+        bSaiba.setBorderPainted(false);
+        bSaiba.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bSaibaActionPerformed(evt);
+            }
+        });
 
-        jButton5.setBackground(new java.awt.Color(255, 153, 0));
-        jButton5.setFont(new java.awt.Font("SimSun", 1, 18)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 230, 154));
-        jButton5.setText("Mais Informações");
-        jButton5.setBorder(null);
-        jButton5.setBorderPainted(false);
+        bMin.setBackground(new java.awt.Color(255, 153, 0));
+        bMin.setFont(new java.awt.Font("SimSun", 1, 18)); // NOI18N
+        bMin.setForeground(new java.awt.Color(255, 230, 154));
+        bMin.setText("Mais Informações");
+        bMin.setBorder(null);
+        bMin.setBorderPainted(false);
+        bMin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bMinActionPerformed(evt);
+            }
+        });
 
         catalogo.setBackground(new java.awt.Color(255, 153, 0));
         catalogo.setFont(new java.awt.Font("SimSun", 1, 18)); // NOI18N
@@ -147,10 +157,10 @@ public class NovaHome extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(catalogo, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(bMin, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton3)
+                        .addComponent(bSaiba)
                         .addGap(41, 41, 41))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -161,14 +171,14 @@ public class NovaHome extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
+                    .addComponent(bMin)
                     .addComponent(catalogo))
                 .addGap(10, 10, 10)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3))
+                .addComponent(bSaiba))
         );
 
         jMenu1.setText("File");
@@ -208,9 +218,19 @@ public class NovaHome extends javax.swing.JFrame {
     }//GEN-LAST:event_cadastroActionPerformed
 
     private void catalogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catalogoActionPerformed
-        Catalogo Ncatalogo = new Catalogo();
+        NewCatalogo Ncatalogo = new NewCatalogo();
         Ncatalogo.setVisible(true);
     }//GEN-LAST:event_catalogoActionPerformed
+
+    private void bMinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bMinActionPerformed
+      Catalogo bMin = new Catalogo();
+      bMin.setVisible(true);
+    }//GEN-LAST:event_bMinActionPerformed
+
+    private void bSaibaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSaibaActionPerformed
+       Catalogo bSaiba = new  Catalogo();
+       bSaiba.setVisible(true);
+    }//GEN-LAST:event_bSaibaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -248,11 +268,11 @@ public class NovaHome extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bMin;
+    private javax.swing.JButton bSaiba;
     private javax.swing.JButton btn9;
     private javax.swing.JButton cadastro;
     private javax.swing.JButton catalogo;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;

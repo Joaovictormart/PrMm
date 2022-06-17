@@ -5,7 +5,7 @@ import View.FinCompra;
 import View.Catalogo;
 import View.Cadastro;
 import View.NovaHome;
-import View.Produto;
+import View.BingBang;
 
 public class Main {
 
@@ -14,7 +14,7 @@ public class Main {
         Login jLogin = new Login();
         Catalogo jCatalogo = new Catalogo();
         Cadastro jCadastro = new Cadastro();
-        Produto jProduto = new Produto();
+        BingBang jProduto = new BingBang();
         FinCompra jFinCompra = new FinCompra();
         DadosUsuario Dados = new DadosUsuario();
         NovaHome mb = new NovaHome();

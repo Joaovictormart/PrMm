@@ -19,9 +19,9 @@ public class Catalogo extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        btn2 = new javax.swing.JButton();
+        btnewCa = new javax.swing.JButton();
+        Bhomeh = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("HOME");
@@ -47,14 +47,23 @@ public class Catalogo extends javax.swing.JFrame {
 
         jLabel8.setText(" mostrando também as informações e métodos de pagamentos.");
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/A/Kobe/CAT-LO.PNG"))); // NOI18N
-
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/A/Kobe/SETA.PNG"))); // NOI18N
 
-        btn2.setText("Catálogo");
-        btn2.addActionListener(new java.awt.event.ActionListener() {
+        btnewCa.setText("Catálogo");
+        btnewCa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn2ActionPerformed(evt);
+                btnewCaActionPerformed(evt);
+            }
+        });
+
+        Bhomeh.setBackground(new java.awt.Color(255, 255, 255));
+        Bhomeh.setFont(new java.awt.Font("SimSun", 1, 20)); // NOI18N
+        Bhomeh.setForeground(new java.awt.Color(255, 204, 51));
+        Bhomeh.setText("HOME");
+        Bhomeh.setBorder(null);
+        Bhomeh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BhomehActionPerformed(evt);
             }
         });
 
@@ -70,10 +79,9 @@ public class Catalogo extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGap(33, 33, 33)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(28, 28, 28)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -87,17 +95,18 @@ public class Catalogo extends javax.swing.JFrame {
                                         .addGroup(jPanel2Layout.createSequentialGroup()
                                             .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(btnewCa, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGap(136, 136, 136))
                                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(21, 21, 21))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
+                        .addGap(72, 72, 72)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(75, 75, 75))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Bhomeh, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(143, 143, 143))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -107,9 +116,9 @@ public class Catalogo extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addGap(25, 25, 25))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47)
+                .addGap(39, 39, 39)
+                .addComponent(Bhomeh)
+                .addGap(23, 23, 23)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -128,7 +137,7 @@ public class Catalogo extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 153, Short.MAX_VALUE)
-                        .addComponent(btn2)
+                        .addComponent(btnewCa)
                         .addGap(39, 39, 39))))
         );
 
@@ -146,13 +155,18 @@ public class Catalogo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+    private void btnewCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnewCaActionPerformed
         Login jLogin = new Login();
-        Produto jProduto = new Produto();
+        NewCatalogo jProduto = new NewCatalogo();
         //jLogin.setVisible(true);
         jProduto.setVisible(true);
         dispose();
-    }//GEN-LAST:event_btn2ActionPerformed
+    }//GEN-LAST:event_btnewCaActionPerformed
+
+    private void BhomehActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BhomehActionPerformed
+        NovaHome Bhomeh = new NovaHome();
+        Bhomeh.setVisible(true);
+    }//GEN-LAST:event_BhomehActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -188,9 +202,9 @@ public class Catalogo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn2;
+    private javax.swing.JButton Bhomeh;
+    private javax.swing.JButton btnewCa;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
